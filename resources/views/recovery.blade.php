@@ -45,10 +45,11 @@
                     @endforeach
                 </div>
             </div>
-
-            <button class="no-print m-2 w-1/2 btn btn-default btn-primary hover:bg-primary-dark" type="submit">
-                Continue
-            </button>
+            <div class="text-center">
+                <button class="no-print m-2 w-1/2 btn btn-default btn-primary hover:bg-primary-dark" type="submit">
+                    Continue
+                </button>
+            </div>
         </form>
     </div>
 </div>

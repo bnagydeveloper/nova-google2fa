@@ -38,7 +38,9 @@
             <p class="p-2">To Enable Two Factor Authentication on your Account, you need to do following steps</p>
             <strong>
                 <ol>
-                    <li>Verify the OTP from Google Authenticator Mobile App</li>
+                    <li>Download the Google Authenticator mobile app from the app store</li>
+                    <li>Scan this QR code</li>
+                    <li>Enter the PIN you see in the Google Authenticator in the input below</li>
                 </ol>
             </strong>
             <div class="text-center">
@@ -52,9 +54,9 @@
                             {{  $error }}
                         </p>
                     @endif
-                    <label class="block font-bold mb-2" for="co">Secret</label>
+                    <label class="block font-bold mb-2" for="co">PIN</label>
                     <input class="form-control form-input form-input-bordered w-full" id="secret" type="number"
-                           name="secret" value="" required="required" onkeyup="checkAutoSubmit(this)" autofocus="">
+                           name="one_time_password" value="" required="required" onkeyup="checkAutoSubmit(this)" autofocus="">
                 </div>
                 <button class="w-1/2 btn btn-default btn-primary hover:bg-primary-dark" type="submit">
                     Confirm

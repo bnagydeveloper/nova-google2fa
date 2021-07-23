@@ -24,20 +24,16 @@
     <div class="px-view py-view mx-auto">
         <div class="mx-auto py-8 max-w-sm text-center text-90">
             @include('nova::partials.logo')
+            <h2 class="p-2">Two Factor Authentication</h2>
         </div>
 
         <form id="authenticate_form" class="bg-white shadow rounded-lg p-8 max-w-xl mx-auto" method="POST"
               action="/los/2fa/authenticate">
             @csrf
-            <h2 class="p-2">Two Factor Authentication</h2>
 
-            <p class="p-2">Two factor authentication (2FA) strengthens access security by requiring two methods (also
-                referred to as factors) to
-                verify your identity.
-                Two factor authentication protects against phishing, social engineering and password brute force attacks
-                and secures your logins from attackers
-                exploiting weak or stolen credentials.</p>
-            <p class="p-2"><strong>Enter the pin from Google Authenticator Enable 2FA</strong></p>
+            <div class="text-center">
+                <strong>Enter the PIN from Google Authenticator mobile app</strong>
+            </div>
 
             <div class="text-center pt-3">
                 <div class="mb-6 w-1/2" style="display:inline-block">
@@ -56,14 +52,14 @@
                         </p>
                     @endif
                     <div id="secret_div">
-                        <label class="block font-bold mb-2" for="co">One Time Password</label>
+                        <label class="block font-bold mb-2" for="co">PIN</label>
                         <input class="form-control form-input form-input-bordered w-full" id="secret" type="number"
                                name="secret" value="" onkeyup="checkAutoSubmit(this)" autofocus="">
                     </div>
                     <div id="recover_div" style="display: none;">
                         <label class="block font-bold mb-2" for="co">Recovery code</label>
                         <input class="form-control form-input form-input-bordered w-full" id="recover" type="text"
-                               name="recover" value="" autofocus="">
+                               name="one_time_password" value="" autofocus="">
                     </div>
                 </div>
                 <button class="w-1/2 btn btn-default btn-primary hover:bg-primary-dark" type="submit">
