@@ -54,12 +54,12 @@
                     <div id="secret_div">
                         <label class="block font-bold mb-2" for="co">PIN</label>
                         <input class="form-control form-input form-input-bordered w-full" id="secret" type="number"
-                               name="secret" value="" onkeyup="checkAutoSubmit(this)" autofocus="">
+                               name="one_time_password" value="" onkeyup="checkAutoSubmit(this)" autofocus="">
                     </div>
                     <div id="recover_div" style="display: none;">
                         <label class="block font-bold mb-2" for="co">Recovery code</label>
                         <input class="form-control form-input form-input-bordered w-full" id="recover" type="text"
-                               name="one_time_password" value="" autofocus="">
+                               name="recover" value="" autofocus="">
                     </div>
                 </div>
                 <button class="w-1/2 btn btn-default btn-primary hover:bg-primary-dark" type="submit">
