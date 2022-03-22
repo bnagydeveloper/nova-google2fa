@@ -115,7 +115,7 @@ class Google2fa extends Tool
         }
 
         if (app(Google2FAAuthenticator::class)->isAuthenticated()) {
-            return response()->redirectTo(config('nova.path'));
+            return response()->redirectToIntended(config('nova.path'));
         }
 
         $data['error'] = 'PIN is invalid.';
