@@ -32,6 +32,10 @@ class Google2fa
         }
         $authenticator = app(Google2FAAuthenticator::class)->boot($request);
         if (auth()->guest() || $authenticator->isAuthenticated()) {
+            $intented = $request->session()->get('url.intended');
+            if (!$intented && url()->previous()) {
+                $request->session()->put('url.intended', url()->previous());
+            }
             return $next($request);
         }
         if (empty(auth()->user()->user2fa) || auth()->user()->user2fa->google2fa_enable === 0) {
